@@ -6,7 +6,7 @@ import "../App.css";
 
 const Sidebar = () => {
   return (
-    <div className="px-2 sm:px-4 mt-1 sm:mt-2 w-[60vw] sm:w-[40vw]">
+    <div className="px-4 mt-1 sm:mt-2 w-[60vw] sm:w-[40vw]">
       <MdOutlineKeyboardArrowLeft
         size={25}
         className="text-red-600 bg-gray-300 rounded-full mb-3 top-[10px] left-[0px] mt-1"
@@ -57,11 +57,11 @@ const Sidebar = () => {
         bodhisattva, Maitreya wears a heavily adorned with earrings, wristlets,
         necklaces, and an amulet.The
       </p>
-      <div className="flex items-center mt-3 text-red-800 cursor-pointer">
+      <div className="flex items-center mt-2 text-red-800 cursor-pointer">
         <BsArrowRightShort className="mt-1" />
         <span className="text-xs ml-1 sm:text-lg">Read More</span>
       </div>
-      <div className="flex mt-3">
+      <div className="flex mt-2">
         <button
           className="text-white bg-orange-900 text-xs font-bold px-2 py-1 rounded-lg mr-2"
           type="button"
