@@ -11,7 +11,7 @@ const MainContainer = () => {
   return (
     <div className="flex">
       {isOpen && <Sidebar />}
-      <div className="main-container">
+      <div className="main-container w-full">
         <div className="icons">
           <AiOutlineDoubleLeft
             className="side-bar"
