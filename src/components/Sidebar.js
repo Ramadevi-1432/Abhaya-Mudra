@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { AiOutlineLike, AiOutlineShareAlt, AiOutlineEye } from "react-icons/ai";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import { BsArrowRightShort } from "react-icons/bs";
 import "../App.css";
 
 const Sidebar = () => {
+  const [showDescription, setShowDescription] = useState(false);
+  const description = `Maitreya, the future Budha to be, resides in the Tushita heaven as a
+  bodhisattva waiting to redeem humanity. In Buddhism, Maitreya is the
+  eighth Buddha, a successor of the seven historical Buddhas
+  (sapta-manushi Buddhas). The Digha Nikaya mentions, Maitreya Budha will
+  be born in ketumati, in present-day Varanasi, Uttar Pradesh. As a
+  bodhisattva, Maitreya wears a heavily adorned with earrings, wristlets,
+  necklaces, and an amulet.The`;
   return (
     <div className="px-4 mt-1 sm:mt-2 w-[60vw] sm:w-[40vw]">
       <MdOutlineKeyboardArrowLeft
@@ -48,18 +56,30 @@ const Sidebar = () => {
       <h1 className="text-xs font-semibold mt-1 sm:text-base sm:mt-3">
         Description
       </h1>
+
+      {/* <div className="mt-2 whitespace-pre-line">
+        {showDescription ? description : description.slice(0, 200)}
+
+        <span
+          className="font-bold cursor-pointer active:bg-gray-400 m-3"
+          onClick={() => setShowDescription((bool) => !bool)}
+        >
+          {showDescription ? "Show less" : "Show more"}
+        </span>
+      </div> */}
       <p className="text-xs text-gray-400 sm:text-base ">
-        Maitreya, the future Budha to be, resides in the Tushita heaven as a
-        bodhisattva waiting to redeem humanity. In Buddhism, Maitreya is the
-        eighth Buddha, a successor of the seven historical Buddhas
-        (sapta-manushi Buddhas). The Digha Nikaya mentions, Maitreya Budha will
-        be born in ketumati, in present-day Varanasi, Uttar Pradesh. As a
-        bodhisattva, Maitreya wears a heavily adorned with earrings, wristlets,
-        necklaces, and an amulet.The
+        {showDescription ? description : description.slice(0, 200)}
       </p>
-      <div className="flex items-center mt-2 text-red-800 cursor-pointer">
+      <div
+        className="flex items-center mt-2 text-red-800 cursor-pointer"
+        onClick={() => setShowDescription((bool) => !bool)}
+      >
         <BsArrowRightShort className="mt-1" />
-        <span className="text-xs ml-1 sm:text-lg">Read More</span>
+        {showDescription ? (
+          <span className="text-xs ml-1 sm:text-lg">Read Less</span>
+        ) : (
+          <span className="text-xs ml-1 sm:text-lg">Read More</span>
+        )}
       </div>
       <div className="flex mt-2">
         <button

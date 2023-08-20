@@ -9,7 +9,7 @@ const MainContainer = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <div className="flex">
+    <div className="flex transition-width duration-300 ease-in-out">
       {isOpen && <Sidebar />}
       <div className="main-container w-full">
         <div className="icons">
