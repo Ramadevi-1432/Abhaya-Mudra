@@ -3,13 +3,8 @@ import { AiOutlineLike, AiOutlineShareAlt, AiOutlineEye } from "react-icons/ai";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import { BsArrowRightShort } from "react-icons/bs";
 import "../App.css";
-import { useSelector } from "react-redux";
 
 const Sidebar = () => {
-  const isMenu = useSelector((store) => store.nav.isMenuOpen);
-  if (!isMenu) {
-    return null;
-  }
   return (
     <div className="px-4 col-span-1 w-80">
       <MdOutlineKeyboardArrowLeft
