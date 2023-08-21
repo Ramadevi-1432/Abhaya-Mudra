@@ -2,15 +2,16 @@ import React from "react";
 import { useState } from "react";
 import { AiOutlineDoubleLeft } from "react-icons/ai";
 import Sidebar from "./Sidebar";
+import "../index.css";
 
 const MainContainer = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const handleOpen = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <div className="flex transition-width duration-300 ease-in-out">
-      {isOpen && <Sidebar />}
+    <div className="flex">
+      <Sidebar show={isOpen} />
       <div className="main-container w-full">
         <div className="icons">
           <AiOutlineDoubleLeft

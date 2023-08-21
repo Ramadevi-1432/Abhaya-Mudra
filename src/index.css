@@ -48,3 +48,11 @@ body {
   background-color: white;
   border-radius: 2px;
 }
+.sidebar {
+  width: 40vw;
+  position: relative;
+  transition: all 0.8s;
+}
+.sidebar.active {
+  width: 0;
+}
