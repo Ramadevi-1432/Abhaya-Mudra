@@ -10,9 +10,9 @@ const MainContainer = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <div className="flex">
+    <div className="box-contain">
       <Sidebar show={isOpen} />
-      <div className="main-container w-full h-auto">
+      <div className="img-container w-full">
         {!isOpen ? (
           <div className="icons icons-left">
             <AiOutlineDoubleLeft
@@ -24,7 +24,7 @@ const MainContainer = () => {
         ) : (
           <div className="icons icons-right">
             <AiOutlineDoubleRight
-              className="side-bar sidebar-right"
+              className="side-bar sidebar-right text-white"
               onClick={() => handleOpen()}
               size={20}
             />

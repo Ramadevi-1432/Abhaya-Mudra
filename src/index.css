@@ -16,7 +16,7 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
-.main-container {
+.img-container {
   background-image: url("https://i.imgur.com/An2Rl2R.jpg");
   background-size: cover;
   background-position: center;
@@ -27,8 +27,85 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+.sidebar-main-container {
+  width: 36vw;
+  transition: all 1s;
+}
+.sidebar-container {
+  background: #f3f3f3;
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  height: 90vh;
+  justify-content: flex-start;
+  margin-bottom: 1.7vw;
+  overflow-x: clip;
+  overflow-y: auto;
+  width: 26.6vw;
+}
+.text-container {
+  direction: ltr;
+  padding: 2vw 3vw 3vw;
+}
+.back-btn {
+  margin-bottom: 2vw;
+}
+.head {
+  color: #1e1e1e;
+  font-family: Bitter;
+  font-size: 1.7vw;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  line-height: 1.9vw;
+  overflow-wrap: break-word;
+  text-transform: uppercase;
+  width: 21vw;
+}
+
+.icons-container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1.79vw;
+  margin-top: 2vw;
+}
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding-right: 2vw;
+  padding-top: 0.5vw;
+  text-align: center;
+}
+.details {
+  margin: 0;
+  font-size: 0.84vw;
+  line-height: 1.1vw;
+  margin: 0;
+}
+.description-text {
+  font-weight: 400;
+  font-size: 1vw;
+  margin-bottom: 0.6vw;
+  margin-top: 1.6vw;
+}
+.background-image-container {
+  display: flex;
   flex: 1 1 auto;
 }
+/* .sidebar {
+  width: auto;
+  transition: all 1s;
+} */
+.sidebar-main-container.active {
+  width: 0;
+}
+.scroll-line {
+  display: none;
+}
+
 .image {
   height: 400px;
   width: 400px;
@@ -36,64 +113,137 @@ body {
 }
 .side-bar {
   align-self: flex-start;
-  cursor: pointer;
-}
-.sidebar-right {
-  color: white;
-}
-.sidebar-left {
   color: #c44949;
+  cursor: pointer;
 }
 .content {
   display: flex;
 }
-.icons-right {
+.icons {
   position: absolute;
   top: 60px;
   left: 0px;
-  border-radius: 2px;
-  background-color: #792323;
-}
-.icons-left {
-  position: absolute;
-  top: 60px;
-  left: 0px;
-  border-radius: 2px;
   background-color: white;
+  border-radius: 2px;
 }
-.sidebar {
-  width: 40vw;
-  position: relative;
-  transition: all 1s;
+.btn-container {
+  margin-top: 10px;
 }
-.sidebar.active {
-  width: 0;
+.box-contain {
+  display: flex;
 }
-.head {
-  font-family: "Bitter";
-  font-weight: 300;
-  letter-spacing: 3px;
-  line-height: 1.6vw;
-  width: 23vw;
+.icons.icons-right {
+  background-color: #944040;
 }
-.text {
-  font-size: 15px;
-  font-family: "Nunito";
-  font-style: normal;
+.add-btn {
+  font-size: 8px;
+  padding: 2px 4px;
 }
-.desc-head {
-  font-family: "Nunito";
-  font-size: 1vw;
-  margin-top: 1.2vw;
-  margin-bottom: 0.6vw;
-  font-weight: 400;
-  line-height: 1.2vw;
+@media only screen and (max-width: 600px) {
+  .sidebar-main-container {
+    background-color: grey;
+    height: 0;
+  }
 }
-.desc {
-  font-family: "Nunito";
-  font-size: 17px;
+@media only screen and (max-width: 600px) {
+  .sidebar-container {
+    align-items: baseline;
+    background: #f3f3f3;
+    border-radius: 40px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    bottom: -71vh;
+    box-shadow: 0 -4px 6px rgb(0 0 0/5%);
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    height: 140vw;
+    justify-content: flex-start;
+    opacity: 0.9;
+    overflow: visible;
+    overflow: initial;
+    padding: 4.5vw 6vw 3vw;
+    position: relative;
+    width: 100vw;
+  }
 }
-.button-text {
-  font-family: "Nunito";
-  font-size: 16px;
+@media only screen and (max-width: 600px) {
+  .back-btn,
+  .hideButton {
+    display: none;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .head {
+    font-size: 3.7vw;
+    line-height: 4.9vw;
+    width: 60vw;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .details {
+    font-size: 14px;
+    line-height: 4.5vw;
+    margin-bottom: 2.6vw;
+    margin-top: 2.3vw;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .description-text {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .desc {
+    color: #858585;
+    font-size: 3.4vw;
+    font-weight: 400;
+    line-height: 4.5vw;
+    margin-bottom: 14px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .btn-container {
+    margin-top: 15px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .add-btn {
+    font-size: 10px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .img-container {
+    position: fixed;
+    z-index: 1;
+  }
+  .sidebar-main-container {
+    position: absolute;
+    z-index: 2;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .icons {
+    display: none;
+  }
+  .image {
+    width: 300px;
+    height: 300px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .box-contain {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .scroll-line {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5vw;
+    margin-top: -2vw;
+  }
 }
