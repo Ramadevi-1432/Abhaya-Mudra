@@ -8,6 +8,7 @@ const MainContainer = () => {
   const [isOpen, setIsOpen] = useState(false);
   const handleOpen = () => {
     setIsOpen(!isOpen);
+    console.log(isOpen);
   };
   return (
     <div className="box-contain">
